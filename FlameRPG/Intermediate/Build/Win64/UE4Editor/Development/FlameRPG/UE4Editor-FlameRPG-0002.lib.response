@@ -1,0 +1,18 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-FlameRPG-0002.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Intermediate\Build\Win64\FlameRPGEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Intermediate\Build\Win64\UE4Editor\Development\FlameRPG\FlameRPG.cpp.obj"
+"D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Intermediate\Build\Win64\UE4Editor\Development\FlameRPG\FlameRPGCharacter.cpp.obj"
+"D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Intermediate\Build\Win64\UE4Editor\Development\FlameRPG\FlameRPGGameMode.cpp.obj"
+"D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Intermediate\Build\Win64\UE4Editor\Development\FlameRPG\FlameRPG.init.gen.cpp.obj"
+"D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Intermediate\Build\Win64\UE4Editor\Development\FlameRPG\FlameRPGCharacter.gen.cpp.obj"
+"D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Intermediate\Build\Win64\UE4Editor\Development\FlameRPG\FlameRPGGameMode.gen.cpp.obj"
+"D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Intermediate\Build\Win64\UE4Editor\Development\FlameRPG\Default.rc2.res"
+/OUT:"D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Intermediate\Build\Win64\UE4Editor\Development\FlameRPG\UE4Editor-FlameRPG-0002.lib"
+/INCLUDE:IMPLEMENT_MODULE_FlameRPG
