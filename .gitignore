@@ -4,6 +4,9 @@
 # Rider Files
 .idea/
 
+#Intermediate
+/Intermediate
+
 # Compiled Object files
 *.slo
 *.lo
