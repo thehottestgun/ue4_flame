@@ -64,13 +64,21 @@ protected:
 	float MaxHp;
 	UPROPERTY(EditAnywhere)
 	float Hp;
-
+	UPROPERTY(EditAnywhere)
+	float MaxMana;
+	UPROPERTY(EditAnywhere)
+	float Mana;
+	UPROPERTY(EditAnywhere)
+	float MovementSpeedModifier;
 public:
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+	
 	UFUNCTION(BlueprintPure,Category="Health")
 	float GetHpPercentage();
+	UFUNCTION(BlueprintPure,Category="Mana")
+	float GetEnergyPercentage();
 };
 

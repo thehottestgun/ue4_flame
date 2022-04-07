@@ -14,7 +14,7 @@ void AFlamePlayerController::CreateHUD()
 	}
 }
 
-UUserWidget* AFlamePlayerController::GetHUD()
+UUserWidget* AFlamePlayerController::GetHUD() const
 {
 	return HUDWidget;
 }

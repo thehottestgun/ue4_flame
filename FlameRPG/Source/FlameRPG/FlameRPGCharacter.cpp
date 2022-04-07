@@ -44,9 +44,16 @@ AFlameRPGCharacter::AFlameRPGCharacter()
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
-	// Set Max HP
+	// Set HP
 	MaxHp = 50;
 	Hp = MaxHp;
+
+	// Set Mana
+	MaxMana = 50;
+	Mana = MaxMana;
+
+	// Set movement speed modifier
+	MovementSpeedModifier = .5f;
 }
 
 void AFlameRPGCharacter::BeginPlay()
@@ -86,6 +93,11 @@ float AFlameRPGCharacter::GetHpPercentage()
 	return Hp/MaxHp;
 }
 
+float AFlameRPGCharacter::GetEnergyPercentage()
+{
+	return Mana/MaxMana;
+}
+
 void AFlameRPGCharacter::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 {
 		Jump();
@@ -118,7 +130,7 @@ void AFlameRPGCharacter::MoveForward(float Value)
 
 		// get forward vector
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-		AddMovementInput(Direction, Value);
+		AddMovementInput(Direction, Value * MovementSpeedModifier);
 	}
 }
 
@@ -133,6 +145,6 @@ void AFlameRPGCharacter::MoveRight(float Value)
 		// get right vector 
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 		// add movement in that direction
-		AddMovementInput(Direction, Value);
+		AddMovementInput(Direction, Value * MovementSpeedModifier); 
 	}
 }

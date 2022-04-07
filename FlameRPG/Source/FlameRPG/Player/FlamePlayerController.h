@@ -17,7 +17,7 @@ class FLAMERPG_API AFlamePlayerController : public APlayerController
 
 public:
 	void CreateHUD();
-	class UUserWidget* GetHUD();
+	class UUserWidget* GetHUD() const;
 protected:
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<UUserWidget> HUDClass;
