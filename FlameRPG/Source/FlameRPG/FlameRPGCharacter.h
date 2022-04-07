@@ -80,5 +80,9 @@ public:
 	float GetHpPercentage();
 	UFUNCTION(BlueprintPure,Category="Mana")
 	float GetEnergyPercentage();
+	UFUNCTION()
+	void Sprint();
+	UFUNCTION()
+	void StopSprinting();
 };
 

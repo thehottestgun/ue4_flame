@@ -72,6 +72,9 @@ void AFlameRPGCharacter::SetupPlayerInputComponent(class UInputComponent* Player
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
+	PlayerInputComponent->BindAction("Sprint",IE_Pressed,this,&AFlameRPGCharacter::Sprint);
+	PlayerInputComponent->BindAction("Sprint",IE_Released,this,&AFlameRPGCharacter::StopSprinting);
+
 	PlayerInputComponent->BindAxis("MoveForward", this, &AFlameRPGCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AFlameRPGCharacter::MoveRight);
 
@@ -96,6 +99,16 @@ float AFlameRPGCharacter::GetHpPercentage()
 float AFlameRPGCharacter::GetEnergyPercentage()
 {
 	return Mana/MaxMana;
+}
+
+void AFlameRPGCharacter::Sprint()
+{
+	MovementSpeedModifier *= 2;
+}
+
+void AFlameRPGCharacter::StopSprinting()
+{
+	MovementSpeedModifier /= 2;
 }
 
 void AFlameRPGCharacter::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
