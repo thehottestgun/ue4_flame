@@ -1,9 +1,10 @@
 D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Source\FlameRPG\FlameRPG.Build.cs
+D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Plugins\Developer\RiderLink\Source\RD\RD.Build.cs
 D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Plugins\Developer\RiderLink\Source\RiderBlueprint\RiderBlueprint.Build.cs
 D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Plugins\Developer\RiderLink\Source\RiderLogging\RiderLogging.Build.cs
-D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Plugins\Developer\RiderLink\Source\RiderLink\RiderLink.Build.cs
-D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Plugins\Developer\RiderLink\Source\RD\RD.Build.cs
-D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Plugins\Developer\RiderLink\Source\RiderShaderInfoDump\RiderShaderInfoDump.Build.cs
 D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Plugins\Developer\RiderLink\Source\RiderGameControl\RiderGameControl.Build.cs
+D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Plugins\Developer\RiderLink\Source\RiderLink\RiderLink.Build.cs
+D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Plugins\Developer\RiderLink\Source\RiderShaderInfoDump\RiderShaderInfoDump.Build.cs
+D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Plugins\Developer\RiderSourceCodeAccess\Source\RiderSourceCodeAccess\RiderSourceCodeAccess.Build.cs
 D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Source\FlameRPG.Target.cs
 D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Source\FlameRPGEditor.Target.cs

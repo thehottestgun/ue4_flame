@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Player/FlamePlayerController.h"
 #include "GameFramework/Character.h"
 #include "FlameRPGCharacter.generated.h"
 
@@ -20,7 +21,7 @@ class AFlameRPGCharacter : public ACharacter
 	class UCameraComponent* FollowCamera;
 public:
 	AFlameRPGCharacter();
-
+	virtual void BeginPlay() override;
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseTurnRate;
@@ -59,11 +60,17 @@ protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	// End of APawn interface
+	UPROPERTY(EditAnywhere)
+	float MaxHp;
+	UPROPERTY(EditAnywhere)
+	float Hp;
 
 public:
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+	UFUNCTION(BlueprintPure,Category="Health")
+	float GetHpPercentage();
 };
 

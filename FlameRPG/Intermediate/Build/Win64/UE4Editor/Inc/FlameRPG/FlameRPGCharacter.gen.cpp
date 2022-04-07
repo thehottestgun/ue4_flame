@@ -17,11 +17,50 @@ void EmptyLinkFunctionForGeneratedCodeFlameRPGCharacter() {}
 	FLAMERPG_API UClass* Z_Construct_UClass_AFlameRPGCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_FlameRPG();
+	FLAMERPG_API UFunction* Z_Construct_UFunction_AFlameRPGCharacter_GetHpPercentage();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 // End Cross Module References
 	void AFlameRPGCharacter::StaticRegisterNativesAFlameRPGCharacter()
 	{
+		UClass* Class = AFlameRPGCharacter::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "GetHpPercentage", &AFlameRPGCharacter::execGetHpPercentage },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AFlameRPGCharacter_GetHpPercentage_Statics
+	{
+		struct FlameRPGCharacter_eventGetHpPercentage_Parms
+		{
+			float ReturnValue;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AFlameRPGCharacter_GetHpPercentage_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FlameRPGCharacter_eventGetHpPercentage_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AFlameRPGCharacter_GetHpPercentage_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AFlameRPGCharacter_GetHpPercentage_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFlameRPGCharacter_GetHpPercentage_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Health" },
+		{ "ModuleRelativePath", "FlameRPGCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFlameRPGCharacter_GetHpPercentage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFlameRPGCharacter, nullptr, "GetHpPercentage", nullptr, nullptr, sizeof(FlameRPGCharacter_eventGetHpPercentage_Parms), Z_Construct_UFunction_AFlameRPGCharacter_GetHpPercentage_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AFlameRPGCharacter_GetHpPercentage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFlameRPGCharacter_GetHpPercentage_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFlameRPGCharacter_GetHpPercentage_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AFlameRPGCharacter_GetHpPercentage()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFlameRPGCharacter_GetHpPercentage_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AFlameRPGCharacter_NoRegister()
 	{
@@ -30,9 +69,18 @@ void EmptyLinkFunctionForGeneratedCodeFlameRPGCharacter() {}
 	struct Z_Construct_UClass_AFlameRPGCharacter_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Hp_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Hp;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxHp_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxHp;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseLookUpRate_MetaData[];
 #endif
@@ -57,6 +105,9 @@ void EmptyLinkFunctionForGeneratedCodeFlameRPGCharacter() {}
 		(UObject* (*)())Z_Construct_UClass_ACharacter,
 		(UObject* (*)())Z_Construct_UPackage__Script_FlameRPG,
 	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_AFlameRPGCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AFlameRPGCharacter_GetHpPercentage, "GetHpPercentage" }, // 80733639
+	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFlameRPGCharacter_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
@@ -64,6 +115,22 @@ void EmptyLinkFunctionForGeneratedCodeFlameRPGCharacter() {}
 		{ "ModuleRelativePath", "FlameRPGCharacter.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_Hp_MetaData[] = {
+		{ "Category", "FlameRPGCharacter" },
+		{ "ModuleRelativePath", "FlameRPGCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_Hp = { "Hp", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFlameRPGCharacter, Hp), METADATA_PARAMS(Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_Hp_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_Hp_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_MaxHp_MetaData[] = {
+		{ "Category", "FlameRPGCharacter" },
+		{ "Comment", "// End of APawn interface\n" },
+		{ "ModuleRelativePath", "FlameRPGCharacter.h" },
+		{ "ToolTip", "End of APawn interface" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_MaxHp = { "MaxHp", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFlameRPGCharacter, MaxHp), METADATA_PARAMS(Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_MaxHp_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_MaxHp_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_BaseLookUpRate_MetaData[] = {
 		{ "Category", "Camera" },
@@ -105,6 +172,8 @@ void EmptyLinkFunctionForGeneratedCodeFlameRPGCharacter() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFlameRPGCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_CameraBoom_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_CameraBoom_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFlameRPGCharacter_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_Hp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_MaxHp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_BaseLookUpRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_BaseTurnRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFlameRPGCharacter_Statics::NewProp_FollowCamera,
@@ -118,11 +187,11 @@ void EmptyLinkFunctionForGeneratedCodeFlameRPGCharacter() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AFlameRPGCharacter_Statics::PropPointers,
 		nullptr,
 		ARRAY_COUNT(DependentSingletons),
-		0,
+		ARRAY_COUNT(FuncInfo),
 		ARRAY_COUNT(Z_Construct_UClass_AFlameRPGCharacter_Statics::PropPointers),
 		0,
 		0x008000A0u,
@@ -137,7 +206,7 @@ void EmptyLinkFunctionForGeneratedCodeFlameRPGCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFlameRPGCharacter, 2927412268);
+	IMPLEMENT_CLASS(AFlameRPGCharacter, 519620949);
 	template<> FLAMERPG_API UClass* StaticClass<AFlameRPGCharacter>()
 	{
 		return AFlameRPGCharacter::StaticClass();
