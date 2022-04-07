@@ -1,2 +1,0 @@
-D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Intermediate\Build\Win64\UE4Editor\Development\FlameRPG\Definitions.FlameRPG.h
-D:\Gamedev\UE Projects\UE5_001\UE5_FLAME\FlameRPG\Source\FlameRPG\FlameRPG.h
